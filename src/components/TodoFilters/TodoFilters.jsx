@@ -13,15 +13,15 @@ const TodoFilters = ({
     <FiltersContainer>
       <ItemsLeft total={total} />
       <FilterButtonContainer>
-        <Filterbutton action={()=> showAllTodos() } active="All" filter= {activeFilter} />
-        <Filterbutton action={()=> showActiveTodos() } active="Active" filter= {activeFilter} />
-        <Filterbutton action={()=> showCompletedTodos() } active="Completed" filter= {activeFilter} />
+        <Filterbutton action={()=> showAllTodos() } active={activeFilter} filter= 'All' />
+        <Filterbutton action={()=> showActiveTodos() } active={activeFilter} filter= "Active"/>
+        <Filterbutton action={()=> showCompletedTodos() } active={activeFilter} filter= "Completed" />
       </FilterButtonContainer>
 
 
       <button 
         className='text-gray-400 hover:text-white cursor-pointer transition-all duration-300 ease-in'
-        onClick={handleClearComplete()}
+        onClick={handleClearComplete}
       >
         Clear Completed
       </button>

@@ -29,11 +29,16 @@ const FilterButtonContainer = ( {children} ) => {
 
 
 const Filterbutton = ( {action, active, filter} ) =>{
+    //console.log(filter)
+
     return(
         // Cuando ponemos `` en Tailwind, podemos mezclar la logica con los estilos, como vemos aqui debajo.
-        <button className= {` hover:text-white cursor-pointer transition-all duration-300 ease-in-out `
-            + (active.toLowerCase().includes(filter.toLowerCase()) ? 'text-blue-400' : 'text-gray-400')
-        }>
+        <button 
+           className= {` hover:text-white cursor-pointer transition-all duration-300 ease-in-out `
+            + (filter.toLowerCase().includes(active.toLowerCase()) ? 'text-blue-400' : 'text-gray-400')
+        } 
+        onClick={action}
+        >
             {filter}
         </button>
     )

@@ -80,7 +80,7 @@ function App() {
 
   const handleClearComplete = () =>{
     const updatedList = todos.filter(todo => !todo.completed)
-    setActiveFilter(updatedList)
+    setTodos(updatedList)
   }
 
   const showAllTodos = () =>{
@@ -110,7 +110,7 @@ function App() {
             handleDelete = { handleDelete } 
             handleClearComplete={ handleClearComplete }
             showAllTodos={ showAllTodos }
-            showActiveFilters={ showActiveFilters }
+            showActiveTodos={ showActiveFilters }
             showCompletedTodos={ showCompletedTodos }
           />
         </div>
