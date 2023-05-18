@@ -1,0 +1,5 @@
+Al momento de importar un icon desde https://heroicons.com/:
+
+- Crear los archivos SIN extension (para asi poder escribir el codigo de importacion)
+- Una vez hecho eso, agregarle al archivo su extension svg
+- Si queremos cambiar el color de la imagen, a "fill" le cambiamos por ejemplo a blanco. Quedaría asi: fill: "#fff".
